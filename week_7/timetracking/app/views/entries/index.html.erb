@@ -1,0 +1,12 @@
+<h2>I am an entries page</h2>
+
+<ul>
+  <% @entries.each do |entry| %>
+    <li>
+        ID: <%= entry.id %>
+        -- <%= entry.comments %>
+        -- <%= entry.hours %>h
+        -- <%= entry.minutes %>h
+    </li>
+  <% end %>
+</ul>
