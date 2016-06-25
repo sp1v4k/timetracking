@@ -18,7 +18,10 @@ class ProjectsController < ApplicationController
   end
 
   def create
+    # project = Project.new(project_params.merge(user_id: current_user.id))
+    # project = current_user.projects.new(project_params)
     project = Project.new(project_params)
+    project.user_id = current_user.id
     project.save!
     redirect_to projects_path
   end
